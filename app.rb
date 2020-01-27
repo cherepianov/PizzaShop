@@ -2,6 +2,12 @@
 require 'rubygems'
 require 'sinatra'
 
+set :database, "sqlite3:pizzashop.db"
+
+class Product < Activerecord::base
+  
+end
+
 get '/' do
 	erb :index
 end
