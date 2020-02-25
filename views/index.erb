@@ -1,2 +1,29 @@
-<h2>Welcome to pizza shop</h2>
+<h2>Welcome to учебный сайт</h2>
+
+<div class="row">
+
+  <% @products.each do |p| %>
+    <div class="col-md-offset-2">
+        <div>
+          <%= p.title %>
+        </div>
+        <div>
+          <img src="<%= p.path_to_image %>" width="120" height="100"  alt="10"/>
+        </div>
+        <div>
+          <%= p.description %>
+        </div>
+        <div>
+          Size: <%= p.size %> cm
+        </div>
+        <div>
+          Price: <%= p.price %> rub
+        </div>
+    <div>
+      <button class="btn btn-sm btn-success" onclick="add_to_cart()">Add to cart</button>
+    </div>
+    <% end %>
+  </div>
+</div>
+</br>
 <button class="btn btn-primary" onclick="something()">Click me!</button>
